@@ -1,0 +1,34 @@
+<div class="home">
+
+<br><br>
+
+<div class="ship-search">
+<div class="destination-content">
+    <label class="from-to">From</label>
+    <b><label *ngIf="!(place_change)">Lakshadweep</label>
+    <label *ngIf="place_change">Kochi</label>
+    <label class="arrow">&#8680;</label></b>
+    <label class="from-to">To</label>
+    <b><label *ngIf="!(place_change)">Kochi</label>
+    <label *ngIf="place_change">Lakshadweep</label>
+    <button class="change-btn" (click)="change_place()"><b>Change</b></button></b>
+</div>
+<br>
+
+<div class="date-content">
+    <label>Choose Date</label>
+    <input type="date">
+</div>
+<br><br>
+
+<button class="optional-btn" style="vertical-align:middle" (click)="optional_content()"><span>Optional</span></button>
+
+<div class="optional-content" *ngIf="optional_btn">
+    <label>Select Island</label>
+</div>
+<br><br>
+
+<button class="search-btn"><b>Search Ships</b></button>
+</div>
+
+</div>

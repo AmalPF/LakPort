@@ -1,0 +1,34 @@
+.ticket-status {
+    padding: 10px;
+}
+
+.no-bookings {
+    padding: 8px;
+}
+
+.bookings {
+    padding: 8px;
+}
+
+.bookings table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.bookings table td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.bookings table tr:nth-child(even){background-color: #f2f2f2;}
+
+.bookings table tr:hover {background-color: #ddd;}
+
+.bookings table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }

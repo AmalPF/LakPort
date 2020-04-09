@@ -1,0 +1,61 @@
+
+<div>
+
+<form #signupForm="ngForm">
+
+<!--testing-->
+{{ signupForm.value | json }}<hr>
+{{ userModel | json }}<hr>
+<!---->
+
+        <label>Name</label>
+        <div ngModelGroup="name">
+                <input type="text" name="first_name" placeholder="First Name" ngModel>
+                <input type="text" name="middle_name" placeholder="Middle Name" ngModel>
+                <input type="text" name="last_name" placeholder="Last Name" ngModel><br>
+        </div>
+
+        <label>User Name</label>
+        <input type="text" name="user_name" placeholder="Username" [(ngModel)]="userModel.user_name"><br>
+
+        <label>Date of Birth</label>
+        <input type="date" name="date_of_birth" [min]="maximum_date()" ngModel><br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" ngModel>Male
+        <input type="radio" name="gender" value="female" ngModel>Female
+        <input type="radio" name="gender" value="other" ngModel>Other<br>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Example@gmail.com" ngModel><br>
+
+        <label>Phone Number</label>
+        <input type="number" maxlength="11" minlength="10" name="phone_no" ngModel>
+        <input type="tel" name="phone_no2" ngModel><br>
+
+        <label>Aadhaar Number</label>
+        <input type="number" maxlength="12" minlength="12" name="aadhaar_no" ngModel><br>
+
+        <label>Islander in Lakshadweep</label>
+        <select id="Islands" name="island" ngModel>
+                <option selected value="-1">--Select an Island--</option>
+                <option value="0">NOT an Islander</option>
+                <option *ngFor="let island of islands">{{ island }}</option>
+        </select><br>
+
+        <label>Address</label>
+        <textarea name="address" ngModel></textarea><br>
+
+        <label>PIN</label>
+        <input type="number" maxlength="6" name="pin" ngModel><br>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Type Password" ngModel>
+        <input type="password" name="re_password" placeholder="Re-type Password" ngModel><br>
+
+        <input type="submit" value="Register">
+
+</form>
+
+</div>
+ 

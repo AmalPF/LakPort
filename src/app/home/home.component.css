@@ -1,0 +1,150 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.home {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.ship-search {
+    border: black;
+    box-shadow: 5px 8px 16px 5px rgba(0,0,0,0.2);
+    padding: 30px;
+    margin: 10px;
+    margin-left: 40px;
+    align-content: center;
+    width: 500px;
+    border-radius: 16px;
+    display: block;
+}
+
+.destination-content, .date-content {
+    margin: auto;
+    width: 100%;
+}
+
+label {
+    margin: 5px;
+    padding-top: 0;
+    margin-top: 10px;
+}
+
+.from-to {
+  color: #ffa600;
+}
+
+.destination-content {
+    align-content: center;
+}
+
+.destination-content .arrow {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+
+.destination-content .change-btn {
+    border-radius: 15px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: yellowgreen;
+    outline: none;
+}
+
+.destination-content .change-btn:hover,:visited,:active {
+    border: none;
+}
+
+.destination-content .change-btn:hover {
+    background-color: rgb(161, 230, 25);
+}
+
+/*Date styling*/
+.date-content input[type=date] {
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none; 
+}
+
+/*Optional button styling*/
+.optional-btn {
+    float: left;
+    border-radius: 4px;
+    background-color: #ffa600;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    outline: none;
+  }
+  
+  .optional-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .optional-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .optional-btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .optional-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+/* Optional content part styling */
+.optional-content {
+  border: 4px double black;
+  border-radius: 2px;
+}
+
+/* Ship Search btn */
+.search-btn {
+    margin: 8px;
+    border-radius: 8px;
+    background-color: #9dff00;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    outline: none;
+}
+
+.search-btn:hover {
+    background-color: #94e70f;
+    border: 1px double rgb(179, 255, 0);
+}

@@ -1,0 +1,101 @@
+<div class="ticket-booking">
+
+    <div class="booking-option1">
+        <label>Select Date</label>
+        <input type="date">
+        <br>
+        <label>Select Source Location</label>
+        <select>
+            <option selected>--Select Source--</option>
+            <option>Kochi</option>
+            <option>Mangalur</option>
+            <option>Kavaratti</option>
+        </select>
+        <br>
+        <label>Select Destination Location</label>
+        <select>
+            <option selected>--Select Destination--</option>
+            <option>Kochi</option>
+            <option>Mangalur</option>
+            <option>Kavaratti</option>
+        </select>
+        <br>
+        <label>Select Ship</label>
+        <select>
+            <option selected>--Select Ship--</option>
+            <option>ABC</option>
+            <option>DEF</option>
+            <option>XYZ</option>
+        </select>
+        <br>
+        <label>Select Class</label>
+        <select>
+            <option selected>--Select Class--</option>
+            <option>Class 1</option>
+            <option>Class 2</option>
+            <option>Class 3</option>
+        </select>
+        <br>
+        <label>No.of Passengers</label>
+        <input list="passenger_no">
+        <datalist id="passenger_no">
+            <option *ngFor="let i of count" value="{{i}}"></option>
+        </datalist>
+        <br>
+        <button>Proceed</button>
+    </div>
+
+    <div class="booking-option2">
+        <table>
+            <caption>Passenger Details</caption>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Aadhaar No.</th>
+                <th>Mobile No.</th>
+                <th>Clear</th>
+                <th>Delete</th>
+            </tr>
+            <tr *ngFor="let i of '1'.repeat(passenger_count).split(''), index as num">
+                <td>{{num + 1}}</td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+                <td>
+                    <select>
+                        <option selected>--Select Gender--</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea></textarea>
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+                <td>
+                    <button>Clear</button>
+                </td>
+                <th>
+                    <button>Delete</button>
+                </th>
+            </tr>
+        </table>
+        Add more passengers: <button (click)="add_new_passenger()">Add more</button>
+        <br><br>
+
+        <button routerLink="/payment">Book</button>
+    </div>
+
+</div>

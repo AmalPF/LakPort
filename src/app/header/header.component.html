@@ -1,0 +1,114 @@
+<style>
+    .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980B9;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown a:hover {background-color: #ddd;}
+    
+    .show {display: block;}
+    </style>
+
+<div>
+    <h1><b>LakPort</b></h1>
+    <h3>Online Application for Booking Ship Tickets</h3>
+</div>
+
+<div class="menu-container">
+    
+    <a class="btn" routerLink = ''>Home</a>
+
+    <div class="dropdown">
+        <button class="dropbtn">Booking</button>
+        <div id="drop-down" class="dropdown-content">
+            <a (click)="close_dropdown()" routerLink="/ticket-booking">Ticket Booking</a>
+            <a (click)="close_dropdown()" routerLink="/ship-schedule">Ship Schedule</a>
+            <a (click)="close_dropdown()" routerLink="/seat-availability">Seat Availability</a>
+            <a (click)="close_dropdown()" routerLink="/fare-table">Fare Table</a>
+            <a (click)="close_dropdown()" routerLink="/freight-charge">Freight Charge</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Infromation</button>
+        <div id="drop-down" class="dropdown-content">
+            <a class="drop-link" routerLink="/aboutus">About Us</a>
+            <a routerLink="/contact">Contact Us</a>
+            <a routerLink="/terms-conditions">Terms & Conditions</a>
+            <a routerLink="/privacy-policy">Privacy Policy</a>
+            <a routerLink="/refund-policy">Refund/Cancellation Policy</a>
+        </div>
+    </div>
+    
+    <a class="btn" routerLink = 'ticket-status'>Ticket Status</a>
+
+    <span class="login-content">
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <a class="login-btn" routerLink = 'login'><b>Login</b></a>
+    </span>    
+
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+
+</div> 

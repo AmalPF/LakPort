@@ -1,0 +1,12 @@
+div{
+    width: 200px;
+    color: seagreen;
+    position: relative;
+}
+
+ul{
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
